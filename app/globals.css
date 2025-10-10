@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary-color: mediumslateblue;
+
+        --background: 224 71.4% 4.1%;
+        --foreground: 210 20% 98%;
+        --card: 224 71.4% 4.1%;
+        --card-foreground: 210 20% 98%;
+        --popover: 224 71.4% 4.1%;
+        --popover-foreground: 210 20% 98%;
+        --primary: 263.4 70% 50.4%;
+        --primary-foreground: 210 20% 98%;
+        --secondary: 215 27.9% 16.9%;
+        --secondary-foreground: 210 20% 98%;
+        --muted: 215 27.9% 16.9%;
+        --muted-foreground: 217.9 10.6% 64.9%;
+        --accent: 215 27.9% 16.9%;
+        --accent-foreground: 210 20% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 20% 98%;
+        --border: 215 27.9% 16.9%;
+        --input: 215 27.9% 16.9%;
+        --ring: 263.4 70% 50.4%;
+        --radius: 0.5rem;
+    }
+
+    /*.dark {*/
+    /*
+    /*    --foreground: 0 0% 95%;*/
+    /*    --card: 24 9.8% 10%;*/
+    /*    --card-foreground: 0 0% 95%;*/
+    /*    --popover: 0 0% 9%;*/
+    /*    --popover-foreground: 0 0% 95%;*/
+    /*    --primary: 346.8 77.2% 49.8%;*/
+    /*    --primary-foreground: 355.7 100% 97.3%;*/
+    /*    --secondary: 240 3.7% 15.9%;*/
+    /*    --secondary-foreground: 0 0% 98%;*/
+    /*    --muted: 0 0% 15%;*/
+    /*    --muted-foreground: 240 5% 64.9%;*/
+    /*    --accent: 12 6.5% 15.1%;*/
+    /*    --accent-foreground: 0 0% 98%;*/
+    /*    --destructive: 0 62.8% 30.6%;*/
+    /*    --destructive-foreground: 0 85.7% 97.3%;*/
+    /*    --border: 240 3.7% 15.9%;*/
+    /*    --input: 240 3.7% 15.9%;*/
+    /*    --ring: 346.8 77.2% 49.8%;*/
+    /*}*/
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+
+/* Style the navbar */
+.floating-navbar {
+    overflow: hidden;
+    background: url(https://s3-alpha-sig.figma.com/img/27aa/7f50/8f3153ba02db342062382a63bf906279?Expires=1702857600&Signature=ls4dL9BgWACGJ6cdzCv-zuZNzMvfHuIQD9WAIUXq2XM2BHC9pIw2mN94Wpfbt19R208NYEV8h9dWNhq7nNjuut4HoOBrptOjtP6cfqOa-jtZg~4LpB8~1ir~5wNV5HTa44-vTBefqSqKKocBjNHTo7dUUQgI1guOUHSOHs482P95w1VCjCqK6wctSpBkiB4~-1Ko2NKO0Yk4Po5QXb7o5JcjQxA0WLOZak-LYSWHiT3SeiWnjSy6HvNDVHb5mwdcaW~Rix9lnrDURgD4VyUTqHsEIFj2kOo2oZP5hnoyHBgiYEPyEZoFR-sDM9fguo0nmmNPFVLNr5PlQSXJycFMXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    position: fixed; /* Make the navbar sticky */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Navbar links */
+.floating-navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement
+(as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.floating-navbar + .content {
+    padding-top: 60px;
+}
+
+.bg-background {
+    background-color: rgba(31, 32, 35, .8);
+}
+
+#line, #line2 {
+    background-color: grey;
+}
+
+
+.bg-transparent {
+    background-image: url(https://s3-alpha-sig.figma.com/img/27aa/7f50/8f3153ba02db342062382a63bf906279?Expires=1702857600&Signature=ls4dL9BgWACGJ6cdzCv-zuZNzMvfHuIQD9WAIUXq2XM2BHC9pIw2mN94Wpfbt19R208NYEV8h9dWNhq7nNjuut4HoOBrptOjtP6cfqOa-jtZg~4LpB8~1ir~5wNV5HTa44-vTBefqSqKKocBjNHTo7dUUQgI1guOUHSOHs482P95w1VCjCqK6wctSpBkiB4~-1Ko2NKO0Yk4Po5QXb7o5JcjQxA0WLOZak-LYSWHiT3SeiWnjSy6HvNDVHb5mwdcaW~Rix9lnrDURgD4VyUTqHsEIFj2kOo2oZP5hnoyHBgiYEPyEZoFR-sDM9fguo0nmmNPFVLNr5PlQSXJycFMXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+
+}
+
+.herobackground {
+    background: rgba(0, 0, 0, .76);
+}
+
+.herobackground::before {
+    --line: rgba(255, 255, 255, 1);
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 8vmin 8vmin,
+    linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 8vmin 8vmin;
+    mask: linear-gradient(-15deg, transparent 30%, white);
+    top: 0;
+    z-index: -1;
+}
+
+/*svg {*/
+/*    fill: currentColor;*/
+/*}*/
+
+.cardbg {
+    background: rgba(82, 142, 184, 0.2);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+/* .stat{
+   
+    border-left: 1px solid rgba(255, 255, 255, 0.989);
+    
+}  */
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
