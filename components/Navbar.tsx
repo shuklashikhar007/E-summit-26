@@ -54,10 +54,10 @@ const nav = [
     name: "MERCH",
     link: "/merch",
   },
-  {
-    name: "RECOMMENDATIONS",
-    link: "/recommendations/0",
-  },
+ // {
+ //   name: "RECOMMENDATIONS",
+ //   link: "/recommendations/0",
+ // },
   // {
   //   name: "STARTUP EXPO",
   //   link: "/payment?type=startup_expo",
