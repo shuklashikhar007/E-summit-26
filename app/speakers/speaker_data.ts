@@ -391,6 +391,13 @@ export const past_speakers_data = [
 ];
 
 export const present_speakers_data = [
-   
+  {
+    name: " ",
+    des: " ",
+    imgURL: "",
+    xURL: "",
+    instaURL: "",
+    linkedinURL: "",
+  },
   
 ];
