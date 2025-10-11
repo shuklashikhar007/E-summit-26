@@ -16,54 +16,74 @@ type Props = OwnProps;
 
 const SpeakerCard: FunctionComponent<Props> = (props: OwnProps) => {
   return (
-    <div className="relative flex flex-col  hover:bg-accent  bg-card shadow-md bg-clip-border rounded-xl w-64 m-4 md:m-2">
-      <div className="relative mx-4 mt-4 overflow-hidden  shadow-lg bg-clip-border rounded-xl">
+    <div
+      className="
+        relative flex flex-col w-64 m-4 md:m-2 rounded-xl 
+        bg-gradient-to-b from-[#1a1a1a] via-[#0d0d0d] to-[#000000] 
+        border border-yellow-500/30 shadow-lg hover:shadow-yellow-500/20 
+        transition-all duration-300 hover:scale-[1.03] hover:border-yellow-400
+      "
+    >
+      <div
+        className="
+          relative mx-4 mt-4 overflow-hidden rounded-xl shadow-lg
+          border border-yellow-400/20
+        "
+      >
         <Image
-unoptimized
+          unoptimized
           width={500}
           height={800}
-          // fill={true}
           src={props.imgURL}
           alt={props.name}
-          className={"w-full"}
+          className="w-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
         />
       </div>
+
       <div className="p-6 text-center">
-        <h4 className="mb-2 antialiased font-semibold leading-snug tracking-normal">
+        <h4 className="mb-2 font-semibold text-lg text-yellow-400 tracking-wide drop-shadow-md">
           {props.name}
         </h4>
-        <p className="antialiased text-sm leading-relaxed bg-clip-text">
+        <p className="text-sm text-gray-300 leading-relaxed">
           {props.des}
         </p>
       </div>
+
       <div className="flex justify-center p-6 pt-2 gap-7">
-        {/* <Link
-          className="hover:scale-125 transition ease-in-out"
-          href={props.instaURL}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaInstagram className="text-pink-600 text-2xl hover:text-pink-600/75 cursor-pointer transition ease-in-out" />
-        </Link> */}
+        {props.instaURL && (
+          <Link
+            className="hover:scale-125 transition ease-in-out"
+            href={props.instaURL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaInstagram className="text-pink-500 text-2xl hover:text-pink-400 transition-colors duration-300" />
+          </Link>
+        )}
+
         <Link
-          className="text-blue-600 hover:text-blue-600/75 hover:scale-125 transition ease-in-out"
+          className="hover:scale-125 transition ease-in-out"
           href={props.linkedinURL}
           target="_blank"
           rel="noreferrer"
         >
-          <FaLinkedin className="text-blue-600 text-2xl hover:text-blue-600/75 cursor-pointer transition ease-in-out" />
+          <FaLinkedin className="text-yellow-400 text-2xl hover:text-yellow-300 transition-colors duration-300" />
         </Link>
-        {/* <Link
-          className="hover:scale-125 transition ease-in-out"
-          href={props.instaURL}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaTwitter className="text-blue-600 text-2xl hover:text-blue-600/75 cursor-pointer transition ease-in-out" />
-        </Link> */}
+
+        {props.twitterURL && (
+          <Link
+            className="hover:scale-125 transition ease-in-out"
+            href={props.twitterURL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaTwitter className="text-sky-400 text-2xl hover:text-sky-300 transition-colors duration-300" />
+          </Link>
+        )}
       </div>
     </div>
   );
 };
 
 export default SpeakerCard;
+
