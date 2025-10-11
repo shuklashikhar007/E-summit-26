@@ -444,7 +444,7 @@ const Ticket = () => {
                   <h2>DATE</h2>
                   <h2>31 JAN-</h2>
                   <h2>2 FEB </h2>
-                  <h2>2025</h2>
+                  <h2>2026</h2>
                   <div className="decoration-divider"></div>
                 </div>
               </div>
@@ -486,7 +486,7 @@ const Ticket = () => {
                   <h2>DATE</h2>
                   <h2>31 JAN-</h2>
                   <h2>2 FEB</h2>
-                  <h2>2025</h2>
+                  <h2>2026</h2>
                   <div className="decoration-divider"></div>
                 </div>
               </div>

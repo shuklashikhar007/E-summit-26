@@ -25,7 +25,7 @@ const About = () => {
               className={"m-0 max-sm:text-md text-primary font-bold "}
               style={{ fontSize: "2.5rem" }}
             >
-              ABOUT E-SUMMIT&apos;25
+              ABOUT E-SUMMIT&apos;26
             </h3>
 
             <h1 className={"m-0 text-secondary break-words"}>

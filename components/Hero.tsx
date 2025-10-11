@@ -127,7 +127,7 @@ const Hero: FunctionComponent<Props> = () => {
           wanted by us!
         </p>
         <p className="mt-14 md:mt-4 text-2xl text-primary-foreground font-extrabold">
-          31st Jan to 2nd Feb 2025
+          31st Jan to 2nd Feb 2026
         </p>
         <motion.div
           className="mt-24 md:mt-10 flex justify-center items-center"
