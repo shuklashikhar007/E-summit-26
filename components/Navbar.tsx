@@ -58,6 +58,10 @@ const nav = [
     name: "RECOMMENDATIONS",
     link: "/recommendations/0",
   },
+  {
+    name: "Initiative",
+    link: "/initiative",
+  },
   // {
   //   name: "STARTUP EXPO",
   //   link: "/payment?type=startup_expo",
