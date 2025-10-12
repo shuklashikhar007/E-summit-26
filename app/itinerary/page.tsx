@@ -8,25 +8,25 @@ const Page: FunctionComponent<Props> = () => {
   return (
     <section className="w-full pt-[100px]">
       <div className="relative w-full min-h-screen overflow-x-auto">
-        <table className="border-collapse border-4 border-[#487AFA] w-[98%] mx-auto my-12 text-lg text-center">
+        <table className="border-collapse border-4 border-[#6B9CFA] w-[98%] mx-auto my-12 text-lg text-center rounded-2xl overflow-hidden">
           <thead>
             <tr className="bg-[#23C0AD] text-black font-bold text-xl">
-              <th className="border-4 border-[#487AFA] p-6">Date</th>
-              <th className="border-4 border-[#487AFA] p-6">Time</th>
-              <th className="border-4 border-[#487AFA] p-6">
+              <th className="border-4 border-[#6B9CFA] p-6">Date</th>
+              <th className="border-4 border-[#6B9CFA] p-6">Time</th>
+              <th className="border-4 border-[#6B9CFA] p-6">
                 Track A<br />Events & Competitions
               </th>
-              <th className="border-4 border-[#487AFA] p-6">
+              <th className="border-4 border-[#6B9CFA] p-6">
                 Track B<br />Talks & Panels
               </th>
-              <th className="border-4 border-[#487AFA] p-6">
+              <th className="border-4 border-[#6B9CFA] p-6">
                 Track C<br />Showcase & Networking
               </th>
             </tr>
           </thead>
           <tbody>
             {/* 30th Jan */}
-            <tr className="bg-black text-white hover:bg-[#487AFA]/20 transition">
+            <tr className="bg-black text-white hover:bg-[#6B9CFA]/20 transition">
               <td className="border-4 border-[#23C0AD] p-6 text-[#F1E821]">
                 30th Jan, 2025
               </td>
@@ -54,7 +54,7 @@ const Page: FunctionComponent<Props> = () => {
             ].map((time, idx) => (
               <tr
                 key={idx}
-                className="bg-black text-white hover:bg-[#487AFA]/20 transition"
+                className="bg-black text-white hover:bg-[#6B9CFA]/20 transition"
               >
                 {idx === 0 ? (
                   <td
@@ -86,7 +86,7 @@ const Page: FunctionComponent<Props> = () => {
             ].map((time, idx) => (
               <tr
                 key={idx}
-                className="bg-black text-white hover:bg-[#487AFA]/20 transition"
+                className="bg-black text-white hover:bg-[#6B9CFA]/20 transition"
               >
                 {idx === 0 ? (
                   <td
@@ -118,7 +118,7 @@ const Page: FunctionComponent<Props> = () => {
             ].map((time, idx) => (
               <tr
                 key={idx}
-                className="bg-black text-white hover:bg-[#487AFA]/20 transition"
+                className="bg-black text-white hover:bg-[#6B9CFA]/20 transition"
               >
                 {idx === 0 ? (
                   <td
@@ -144,6 +144,7 @@ const Page: FunctionComponent<Props> = () => {
 };
 
 export default Page;
+
 
 
 
