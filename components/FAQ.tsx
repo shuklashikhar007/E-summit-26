@@ -11,7 +11,7 @@ const data = [
     idx: 1,
     question: "When and where is the event?",
     answer:
-      "The event is taking place from 31st Jan to 2nd Feb 2026 in IIT(BHU) Varanasi. However, some of the events demand submissions prior to the main event taking place.",
+      "The event is taking place from 31st Jan to 2nd Feb 2024 in IIT(BHU) Varanasi. However, some of the events demand submissions prior to the main event taking place.",
   },
   {
     idx: 2,
@@ -29,13 +29,13 @@ const data = [
     idx: 4,
     question: "Will there be any networking event in the Summit?",
     answer:
-      "Yes, the E-Summit 26 will host a special networking event that will engage all the investors on board with esteemed professionals, startups and participants.",
+      "Yes, the E-Summit 25 will host a special networking event that will engage all the investors on board with esteemed professionals, startups and participants.",
   },
   {
     idx: 5,
     question: "How can a startup participate in the Summit?",
     answer:
-      "Startups can become a part of the E-Summit 2026 through the Startup Expo - where they can set up their stalls for live demos of their product, and also through multiple events including the flagship event - The Million Dollar Pitch, where you get the chance to pitch your startup to a expert panel of investors from India's leading VCs",
+      "Startups can become a part of the E-Summit 2025 through the Startup Expo - where they can set up their stalls for live demos of their product, and also through multiple events including the flagship event - The Million Dollar Pitch, where you get the chance to pitch your startup to a expert panel of investors from India's leading VCs",
   },
   {
     idx: 6,

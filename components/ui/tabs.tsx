@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
-
 import { cn } from "@/lib/utils"
 
 const Tabs = TabsPrimitive.Root
@@ -14,7 +13,8 @@ const TabsList = React.forwardRef<
   <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",
+      // Updated background to soft gradient using theme colors
+      "inline-flex h-10 items-center justify-center rounded-xl bg-gradient-to-r from-[#F1E821]/20 via-[#23C0AD]/20 to-[#487AFA]/20 p-1 text-[#487AFA] shadow-inner backdrop-blur-sm",
       className
     )}
     {...props}
@@ -29,7 +29,12 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm",
+      // Active tab gets bright gradient + smooth ring transitions
+      "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-all duration-300 " +
+        "ring-offset-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#23C0AD]/50 focus-visible:ring-offset-[#F1E821]/40 " +
+        "disabled:pointer-events-none disabled:opacity-50 " +
+        "data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#F1E821] data-[state=active]:via-[#23C0AD] data-[state=active]:to-[#487AFA] " +
+        "data-[state=active]:text-white data-[state=active]:shadow-md hover:scale-[1.03]",
       className
     )}
     {...props}
@@ -44,7 +49,8 @@ const TabsContent = React.forwardRef<
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+      // Soft border glow on focus
+      "mt-3 rounded-lg border border-[#23C0AD]/20 bg-white/80 p-4 shadow-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#487AFA]/50 focus-visible:ring-offset-[#F1E821]/30 transition-all duration-300",
       className
     )}
     {...props}

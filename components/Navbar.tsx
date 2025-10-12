@@ -1,7 +1,7 @@
 "use client";
 import React, { FunctionComponent, useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "@/public/logos/logoecell.png";
+import logo from "@/public/logos/E-Cell-White[1].png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Menu } from "lucide-react";
@@ -54,14 +54,10 @@ const nav = [
     name: "MERCH",
     link: "/merch",
   },
-  {
-    name: "RECOMMENDATIONS",
-    link: "/recommendations/0",
-  },
-  {
-    name: "Initiative",
-    link: "/initiative",
-  },
+ // {
+ //   name: "RECOMMENDATIONS",
+ //   link: "/recommendations/0",
+ // },
   // {
   //   name: "STARTUP EXPO",
   //   link: "/payment?type=startup_expo",
