@@ -18,7 +18,11 @@ const statsData: Stat[] = [
   { value: "50+", label: "Partners" },
 ];
 
-const StatItem: FunctionComponent<Stat & { isFirstItem: boolean }> = ({ value, label, isFirstItem }) => {
+const StatItem: FunctionComponent<Stat & { isFirstItem: boolean }> = ({
+  value,
+  label,
+  isFirstItem,
+}) => {
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const numericValue = parseInt(value.replace(/\D/g, ""));
@@ -35,64 +39,62 @@ const StatItem: FunctionComponent<Stat & { isFirstItem: boolean }> = ({ value, l
           return controls.stop;
         }
       },
-      {
-        root: null,
-        rootMargin: "1px",
-        threshold: 0.1,
-      },
+      { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
+    if (ref.current) observer.observe(ref.current);
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      if (ref.current) observer.unobserve(ref.current);
     };
   }, []);
 
   return (
     <Tilt>
       <div
-       
         ref={ref}
         className={`
           mt-4 text-center flex flex-col justify-center items-center p-4
-          ${isFirstItem ? '' : 'md:border-l-2 border-white border-t-2 md:border-t-0 '} 
-        
+          ${
+            isFirstItem
+              ? ""
+              : "md:border-l-2 border-yellow-400 border-t-2 md:border-t-0"
+          }
         `}
       >
         <div className="flex justify-center items-center gap-1">
-          <motion.h2 className=" text-3xl sm:text-5xl font-bold text-primary-foreground">
+          <motion.h2 className="text-3xl sm:text-5xl font-extrabold text-yellow-400 drop-shadow-md">
             {rounded}
           </motion.h2>
-          <span className="text-3xl sm:text-4xl font-semibold">+</span>
+          <span className="text-3xl sm:text-4xl font-semibold text-yellow-300">
+            +
+          </span>
         </div>
-        <p className="text-primary mt-2 capitalize">{label.toUpperCase()}</p>
+        <p className="text-gray-200 mt-2 tracking-wide font-medium">
+          {label.toUpperCase()}
+        </p>
       </div>
     </Tilt>
   );
 };
+
 const Stats: FunctionComponent = () => {
   return (
-    <section className="px-0 md:px-20 py-10 overflow-hidden relative pb-16 mt-28 ">
-    <h1 className="text-3xl md:text-4xl text-primary-foreground font-bold text-center mb-6">
-      Key Event Statistics
-    </h1>
-    <div className="md:w-full w-1/3 mx-auto bg-white/10 px-8 py-6 rounded-xl shadow-lg backdrop-blur-sm flex flex-col md:flex-row justify-around items-center">
-      {statsData.map((stat, index) => (
-        // Passing `isFirstItem` as a prop to StatItem to apply different border styles
-        <StatItem 
-          key={index} 
-          value={stat.value} 
-          label={stat.label} 
-          isFirstItem={index === 0}  // `isFirstItem` is true for the first item
-        />
-      ))}
-    </div>
-  </section>
+    <section className="px-0 md:px-20 py-10 overflow-hidden relative pb-16 mt-28 bg-gradient-to-b from-[#0a0a0a] via-[#1a1a1a] to-[#000000] text-white">
+      <h1 className="text-3xl md:text-4xl text-yellow-400 font-bold text-center mb-6 drop-shadow-lg">
+        Key Event Statistics
+      </h1>
+
+      <div className="md:w-full w-1/3 mx-auto bg-white/10 px-8 py-6 rounded-2xl shadow-2xl backdrop-blur-md border border-yellow-500/40 flex flex-col md:flex-row justify-around items-center">
+        {statsData.map((stat, index) => (
+          <StatItem
+            key={index}
+            value={stat.value}
+            label={stat.label}
+            isFirstItem={index === 0}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 

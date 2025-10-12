@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
@@ -11,7 +10,7 @@ export default function Footer() {
       text: "Startup Weekend Varanasi",
     },
     {
-      href: "https://www.ecelliitbhu.com/cd/",
+      href: "https://campusinterns.ecelliitbhu.com/",
       text: "Campus Ambassador",
     },
   ];
@@ -23,11 +22,11 @@ export default function Footer() {
           <div className="flex justify-center gap-6">
             <Link
               className="hover:scale-125 transition ease-in-out"
-              href="https://x.com/ecelliitbhu"
+              href="https://twitter.com/ecelliitbhu"
               target="_blank"
               rel="noreferrer"
             >
-              <FaXTwitter className="text-blue-600 text-2xl hover:text-blue-600/75 cursor-pointer transition ease-in-out" />
+              <FaTwitter className="text-blue-600 text-2xl hover:text-blue-600/75 cursor-pointer transition ease-in-out" />
             </Link>
             <Link
               className="hover:scale-125 transition ease-in-out"
@@ -79,7 +78,7 @@ export default function Footer() {
             change makers to leave behind a legacy!
             <span className="mt-4 block">
               {" "}
-              &copy; 2026 E-Cell IIT BHU{" "}
+              &copy; 2025 E-Cell IIT BHU{" "}
             </span>
           </p>
         </div>

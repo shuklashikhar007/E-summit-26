@@ -12,7 +12,7 @@ const Avatar = React.forwardRef<
   <AvatarPrimitive.Root
     ref={ref}
     className={cn(
-      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
+      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-[#23C0AD] ring-offset-2 ring-offset-[#F1E821]/30 transition-all duration-300 hover:ring-[#487AFA]",
       className
     )}
     {...props}
@@ -39,7 +39,8 @@ const AvatarFallback = React.forwardRef<
   <AvatarPrimitive.Fallback
     ref={ref}
     className={cn(
-      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+      // Soft gradient fallback using your color scheme
+      "flex h-full w-full items-center justify-center rounded-full bg-gradient-to-tr from-[#F1E821] via-[#23C0AD] to-[#487AFA] text-white font-semibold",
       className
     )}
     {...props}

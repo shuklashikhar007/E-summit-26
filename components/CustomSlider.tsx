@@ -42,6 +42,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
 
   return (
     <div className="container mx-auto px-0 sm:px-6 lg:px-8 overflow-hidden relative z-10">
+      {/* Heading */}
       <div className="mb-12 text-center relative z-20">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 break-words">
           {sliderType === "participant" ? (
@@ -60,6 +61,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
         </h2>
       </div>
 
+      {/* Slider Section */}
       <div className="relative w-full overflow-hidden z-10 mb-12">
         <Swiper
           loop={true}
@@ -82,24 +84,31 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
           {slidesData.map((slide, index) => (
             <SwiperSlide
               key={index}
-              className={`transition-transform duration-300 ${
-                index === activeIndex ? "scale-110 z-10" : "scale-95 opacity-80"
+              className={`transition-transform duration-500 ${
+                index === activeIndex ? "scale-105 z-10" : "scale-95 opacity-80"
               }`}
             >
-              <div className="bg-[#1e1e1e] rounded-lg shadow-md sm:px-8 p-6 flex flex-col items-center gap-3 min-h-[200px]">
-              <p className="text-purple-300 text-center text-sm">{slide.post}</p>
-  <h3 className="text-white font-semibold text-lg">{slide.name}</h3>
-  <p className="text-gray-400 text-sm">{slide.description}</p>
-  
-</div>
-
+              <div className="bg-gradient-to-br from-[#1e1e1e] via-[#222] to-[#2a2a2a] border border-gray-700/50 rounded-2xl shadow-lg sm:px-8 p-6 flex flex-col items-center gap-3 min-h-[220px] hover:border-pink-500/40 transition-all duration-300">
+                <p className="text-pink-400 text-center text-sm italic">
+                  {slide.post}
+                </p>
+                <h3 className="text-white font-semibold text-lg">
+                  {slide.name}
+                </h3>
+                <p className="text-gray-400 text-sm text-center">
+                  {slide.description}
+                </p>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
+        {/* Navigation Buttons */}
         <div
           ref={navigationPrev}
-          className={`absolute max-sm:w-7 max-sm:h-7 top-1/2 left-2 transform -translate-y-1/2 z-10 cursor-pointer bg-gradient-to-r from-pink-500 to-purple-600 w-12 h-12 flex justify-center items-center rounded-full shadow-md hover:scale-110`}
+          className="absolute max-sm:w-7 max-sm:h-7 top-1/2 left-2 transform -translate-y-1/2 z-10 cursor-pointer 
+          bg-gradient-to-r from-pink-500 to-purple-600 w-12 h-12 flex justify-center items-center 
+          rounded-full shadow-lg shadow-pink-500/30 hover:scale-110 transition-all"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -112,9 +121,12 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </div>
+
         <div
           ref={navigationNext}
-          className={`absolute max-sm:w-7 max-sm:h-7 top-1/2 right-2 transform -translate-y-1/2 z-10 cursor-pointer bg-gradient-to-r from-pink-500 to-purple-600 w-12 h-12 flex justify-center items-center rounded-full shadow-md hover:scale-110`}
+          className="absolute max-sm:w-7 max-sm:h-7 top-1/2 right-2 transform -translate-y-1/2 z-10 cursor-pointer 
+          bg-gradient-to-r from-purple-600 to-pink-500 w-12 h-12 flex justify-center items-center 
+          rounded-full shadow-lg shadow-purple-500/30 hover:scale-110 transition-all"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
