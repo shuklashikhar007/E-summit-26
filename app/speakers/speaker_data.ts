@@ -392,12 +392,44 @@ export const past_speakers_data = [
 
 export const present_speakers_data = [
   {
-    name: " ",
-    des: " ",
-    imgURL: "",
+    name: "Ankur Warikoo",
+    des: "Founder @Webveda",
+    imgURL: "/presentspeaker/ankur.png",
+    xURL: "",
+    instaURL: "",
+    linkedinURL: "https://www.linkedin.com/in/ankurwarikoo/",
+  },
+  {
+    name: "Dharamveer Singh Chouhan",
+    des: "Co-Founder & CEO at Zo World",
+    imgURL: "/presentspeaker/dharmveer.jpg",
+    xURL: "",
+    instaURL: "",
+    linkedinURL: "https://www.linkedin.com/in/dvcoolster/",
+  },
+  {
+    name: "Dhruv Agarwala",
+    des: "Chief Executive Officer at REA India Pte. Ltd. (Housing.com, Proptiger.com & Makaan.com)",
+    imgURL: "/presentspeaker/dhruv.jpg",
+    xURL: "",
+    instaURL: "",
+    linkedinURL: "https://www.linkedin.com/in/dhruv-agarwala-ba724/",
+  },
+  {
+    name: "Shailesh Kumar",
+    des: "Chief Success Officer at Saras AI",
+    imgURL: "/presentspeaker/shailesh.jpg",
     xURL: "",
     instaURL: "",
     linkedinURL: "",
   },
-  
+  {
+    name: "Gautam Ravi",
+    des: "Some Designation",
+    imgURL: "/presentspeaker/gautam.jpg",
+    xURL: "",
+    instaURL: "",
+    linkedinURL: "https://www.linkedin.com/in/gautamravi192/",
+  },
 ];
+
