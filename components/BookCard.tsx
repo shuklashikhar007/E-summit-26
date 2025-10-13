@@ -1,7 +1,7 @@
 import type React from "react";
 import Link from "next/link";
 import { Card, CardContent } from "./ui/card";
-
+import Image from "next/image";
 interface Review {
   reviewer: string;
   comment: string;
@@ -26,7 +26,7 @@ const BookCard: React.FC<BookCardProps> = ({
   return (
     <Card className="m-2 w-64">
       <CardContent className="p-4">
-        <img
+        <Image
           src={imgURL || "/placeholder.svg"}
           alt={title}
           className="w-full h-full object-cover rounded mb-4"

@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid, Navigation } from "swiper/modules";
+import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/grid";
@@ -42,7 +43,7 @@ const  AlternativeComponent: React.FC<AlternativeComponentProps>  = ({ heading, 
               </div>
             ) : (
               <div className="bg-white bg-opacity-10 p-8  mx-auto mb-5 rounded-lg flex justify-center items-center w-full max-w-[120px]">
-                <img
+                <Image
                   src={item.img}
                   alt={`Brand ${index}`}
                   className="w-auto h-auto max-h-[80px]  object-contain"
