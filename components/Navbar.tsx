@@ -5,7 +5,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import logo from "@/public/logos/logoecell.png";
+import logo from "@/public/logos/E-Cell-White[1].png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -112,24 +112,34 @@ const Navbar: FunctionComponent = () => {
 
             {/* Register Button */}
             <div className="hidden lg:block">
-              <Link href="/payment?type=esummit" className="no-underline">
-                <Button
-                  variant="default"
-                  style={{
-                    background: "linear-gradient(90deg, #6A23A6, #E91045)",
-                    color: "white",
-                    border: "none",
-                    padding: "0.5rem 1.5rem",
-                    fontWeight: "bold",
-                    borderRadius: "0.375rem",
-                    textAlign: "center",
-                    cursor: "pointer",
-                  }}
-                >
-                  Register
-                </Button>
-              </Link>
-            </div>
+  <Link href="/payment?type=esummit" className="no-underline">
+    <Button
+      variant="default"
+      style={{
+        background: "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
+        color: "white",
+        border: "none",
+        padding: "0.5rem 1.5rem",
+        fontWeight: "bold",
+        borderRadius: "0.375rem",
+        textAlign: "center",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+      }}
+      onMouseEnter={(e) =>
+        (e.currentTarget.style.background =
+          "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)")
+      }
+      onMouseLeave={(e) =>
+        (e.currentTarget.style.background =
+          "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)")
+      }
+    >
+      Register
+    </Button>
+  </Link>
+</div>
+
           </div>
         </div>
       </nav>
