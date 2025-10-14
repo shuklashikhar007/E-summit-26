@@ -4,6 +4,7 @@ import { book_data } from "../book_data";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 
 export default function BookDetailPage({ params }: { params: { id: string } }) {
   const bookIndex = Number.parseInt(params.id);
@@ -22,7 +23,7 @@ export default function BookDetailPage({ params }: { params: { id: string } }) {
       <Card className="w-full max-w-none p-6 min-h-[500px]">
         <div className="grid md:grid-cols-[300px_1fr] gap-8">
           <div className="space-y-4">
-            <img
+            <Image
               src={book.imgURL || "/placeholder.svg"}
               alt={book.title}
               className="w-full rounded-lg shadow-lg"
