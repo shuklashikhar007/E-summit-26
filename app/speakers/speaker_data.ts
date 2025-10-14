@@ -425,7 +425,7 @@ export const present_speakers_data = [
   },
   {
     name: "Gautam Ravi",
-    des: "Some Designation",
+    des: "Early stage investor WEH ventures",
     imgURL: "/presentspeaker/gautam.jpg",
     xURL: "",
     instaURL: "",

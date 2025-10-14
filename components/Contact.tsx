@@ -35,7 +35,7 @@ const Contact: FunctionComponent = () => {
 
   return (
     <div>
-      <div className="flex justify-center gap-6">
+      <div className="m-5 flex justify-center gap-6">
         <Link
           className="hover:scale-125 transition ease-in-out"
           href="https://x.com/ecelliitbhu"
@@ -161,7 +161,7 @@ const Contact: FunctionComponent = () => {
 
       {/* Address */}
       <div className="text-center mx-24 my-7">
-        <p className="text-primary font-bold text-2xl">Address</p>
+        <p className="text-red-300 font-bold text-2xl">Address</p>
         <p className="text-sm">
           Indian Institute of Technology (Banaras Hindu University), Varanasi,
           India, PIN: 221005
