@@ -8,18 +8,18 @@ const Page: FunctionComponent<Props> = () => {
   return (
     <section className="w-full pt-[100px]">
       <div className="relative w-full min-h-screen overflow-x-auto">
-        <table className="border-collapse border-4 border-[#6B9CFA] w-[98%] mx-auto my-12 text-lg text-center rounded-2xl overflow-hidden">
+        <table className="border-collapse border-4 border-[#011854] w-[98%] mx-auto my-12 text-lg text-center rounded-2xl overflow-hidden">
           <thead>
             <tr className="bg-[#23C0AD] text-black font-bold text-xl">
-              <th className="border-4 border-[#6B9CFA] p-6">Date</th>
-              <th className="border-4 border-[#6B9CFA] p-6">Time</th>
-              <th className="border-4 border-[#6B9CFA] p-6">
+              <th className="border-4 border-[#011854] p-6">Date</th>
+              <th className="border-4 border-[#011854] p-6">Time</th>
+              <th className="border-4 border-[#011854] p-6">
                 Track A<br />Events & Competitions
               </th>
-              <th className="border-4 border-[#6B9CFA] p-6">
+              <th className="border-4 border-[#011854] p-6">
                 Track B<br />Talks & Panels
               </th>
-              <th className="border-4 border-[#6B9CFA] p-6">
+              <th className="border-4 border-[#011854] p-6">
                 Track C<br />Showcase & Networking
               </th>
             </tr>
@@ -27,15 +27,15 @@ const Page: FunctionComponent<Props> = () => {
           <tbody>
             {/* 30th Jan */}
             <tr className="bg-black text-white hover:bg-[#6B9CFA]/20 transition">
-              <td className="border-4 border-[#23C0AD] p-6 text-[#F1E821]">
+              <td className="border-4 border-[#011854] p-6 text-[#F1E821]">
                 30th Jan, 2025
               </td>
-              <td className="border-4 border-[#23C0AD] p-6 text-[#F1E821]">
+              <td className="border-4 border-[#011854] p-6 text-[#F1E821]">
                 6:00 PM - 8:00 PM
               </td>
-              <td className="border-4 border-[#23C0AD] p-6">—</td>
-              <td className="border-4 border-[#23C0AD] p-6">—</td>
-              <td className="border-4 border-[#23C0AD] p-6">—</td>
+              <td className="border-4 border-[#011854] p-6">—</td>
+              <td className="border-4 border-[#011854] p-6">—</td>
+              <td className="border-4 border-[#011854] p-6">—</td>
             </tr>
 
             {/* 31st Jan (11 rows) */}
@@ -59,17 +59,17 @@ const Page: FunctionComponent<Props> = () => {
                 {idx === 0 ? (
                   <td
                     rowSpan={11}
-                    className="border-4 border-[#23C0AD] p-6 align-top text-[#F1E821]"
+                    className="border-4 border-[#011854] p-6 align-top text-[#F1E821]"
                   >
                     31st Jan, 2025
                   </td>
                 ) : null}
-                <td className="border-4 border-[#23C0AD] p-6 text-[#F1E821]">
+                <td className="border-4 border-[#011854] p-6 text-[#F1E821]">
                   {time}
                 </td>
-                <td className="border-4 border-[#23C0AD] p-6">—</td>
-                <td className="border-4 border-[#23C0AD] p-6">—</td>
-                <td className="border-4 border-[#23C0AD] p-6">—</td>
+                <td className="border-4 border-[#011854] p-6">—</td>
+                <td className="border-4 border-[#011854] p-6">—</td>
+                <td className="border-4 border-[#011854] p-6">—</td>
               </tr>
             ))}
 
@@ -91,17 +91,17 @@ const Page: FunctionComponent<Props> = () => {
                 {idx === 0 ? (
                   <td
                     rowSpan={8}
-                    className="border-4 border-[#23C0AD] p-6 align-top text-[#F1E821]"
+                    className="border-4 border-[#011854] p-6 align-top text-[#F1E821]"
                   >
                     1st Feb, 2025
                   </td>
                 ) : null}
-                <td className="border-4 border-[#23C0AD] p-6 text-[#F1E821]">
+                <td className="border-4 border-[#011854] p-6 text-[#F1E821]">
                   {time}
                 </td>
-                <td className="border-4 border-[#23C0AD] p-6">—</td>
-                <td className="border-4 border-[#23C0AD] p-6">—</td>
-                <td className="border-4 border-[#23C0AD] p-6">—</td>
+                <td className="border-4 border-[#011854] p-6">—</td>
+                <td className="border-4 border-[#011854] p-6">—</td>
+                <td className="border-4 border-[#011854] p-6">—</td>
               </tr>
             ))}
 
@@ -123,17 +123,17 @@ const Page: FunctionComponent<Props> = () => {
                 {idx === 0 ? (
                   <td
                     rowSpan={8}
-                    className="border-4 border-[#23C0AD] p-6 align-top text-[#F1E821]"
+                    className="border-4 border-[#011854] p-6 align-top text-[#F1E821]"
                   >
                     2nd Feb, 2025
                   </td>
                 ) : null}
-                <td className="border-4 border-[#23C0AD] p-6 text-[#F1E821]">
+                <td className="border-4 border-[#011854] p-6 text-[#F1E821]">
                   {time}
                 </td>
-                <td className="border-4 border-[#23C0AD] p-6">—</td>
-                <td className="border-4 border-[#23C0AD] p-6">—</td>
-                <td className="border-4 border-[#23C0AD] p-6">—</td>
+                <td className="border-4 border-[#011854] p-6">—</td>
+                <td className="border-4 border-[#011854] p-6">—</td>
+                <td className="border-4 border-[#011854] p-6">—</td>
               </tr>
             ))}
           </tbody>

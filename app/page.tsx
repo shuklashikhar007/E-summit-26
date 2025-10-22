@@ -27,9 +27,6 @@ export default function Home() {
         <WSYA />
         <SlidersComponent />
        <MarqueeComponent/>
-
-        
-        
         <FAQ />
       </main>
     </section>

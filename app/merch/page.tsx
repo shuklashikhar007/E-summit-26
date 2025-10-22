@@ -48,7 +48,7 @@ export default function CardWithForm() {
       <Link href="https://forms.gle/ybXS7KoaHxqDSkH79" target="_blank" passHref>
         <Button className="mt-12" variant={"default"} 
                         style={{
-                          background: "linear-gradient(90deg, #6A23A6, #E91045)",
+                          background: "linear-gradient(120deg, #F1E821, #23C0AD,#487AFA )",
                           color: "white", 
                           border: "none", 
                           padding: "0.5rem 1.5rem", 

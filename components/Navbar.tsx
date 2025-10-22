@@ -38,19 +38,25 @@ const navItems = [
 const Navbar: FunctionComponent = () => {
   const [scrolling, setScrolling] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isScriptLoaded, setIsScriptLoaded] = useState(false);
+  const [isPortrait, setIsPortrait] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => setScrolling(window.scrollY > 0);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    const handleResize = () => setIsPortrait(window.innerHeight > window.innerWidth);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
     <header className="w-full min-h-fit sticky top-8 z-30 max-w-[76.5rem] mx-auto">
-      <nav
-        className={`w-full rounded-full z-10 bg-background opacity-95 mt-1 fixed md:absolute`}
-      >
+      <nav className={`w-full rounded-full z-10 bg-background opacity-95 mt-1 fixed md:absolute`}>
         <div className="relative block px-8">
           <div className="flex items-center justify-between w-full p-3 gap-1 capitalize">
             {/* Logo */}
@@ -65,81 +71,85 @@ const Navbar: FunctionComponent = () => {
               />
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:block">
-              <ul className="tracking-wide font-light text-2xl flex lg:flex-row flex-wrap justify-end items-center gap-6">
-                {navItems.map((item, index) => (
-                  <li key={index}>
-                    <Link href={item.link} className="no-underline">
-                      <Button className="text-primary-foreground" variant="link">
-                        {item.name.toUpperCase()}
-                      </Button>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Navigation */}
+            {isPortrait ? (
+              // Portrait: Always Dropdown
+              <div className="relative">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      variant="outline"
+                    >
+                      <Menu />
+                    </Button>
+                  </DropdownMenuTrigger>
 
-            {/* Mobile Dropdown Menu */}
-            <div className="relative lg:hidden">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    variant="outline"
-                  >
-                    <Menu />
-                  </Button>
-                </DropdownMenuTrigger>
-
-                {isDropdownOpen && (
-                  <DropdownMenuContent align="start" className="w-56 mr-4">
-                    <DropdownMenuLabel>Navigation</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuGroup>
-                      {navItems.map((item, index) => (
-                        <DropdownMenuItem key={index}>
-                          <Link href={item.link} className="no-underline">
-                            {item.name}
-                          </Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuGroup>
-                  </DropdownMenuContent>
-                )}
-              </DropdownMenu>
-            </div>
+                  {isDropdownOpen && (
+                    <DropdownMenuContent align="start" className="w-56 mr-2">
+                      <DropdownMenuLabel>Navigation</DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuGroup>
+                        {navItems.map((item, index) => (
+                          <DropdownMenuItem key={index}>
+                            <Link href={item.link} className="no-underline">
+                              {item.name}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuGroup>
+                    </DropdownMenuContent>
+                  )}
+                </DropdownMenu>
+              </div>
+            ) : (
+              // Landscape: normal desktop navigation
+              <div className="hidden lg:flex">
+                <ul className="tracking-wide font-light text-2xl flex lg:flex-row flex-wrap justify-end items-center gap-6">
+                  {navItems.map((item, index) => (
+                    <li key={index}>
+                      <Link href={item.link} className="no-underline">
+                        <Button className="text-primary-foreground" variant="link">
+                          {item.name.toUpperCase()}
+                        </Button>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {/* Register Button */}
-            <div className="hidden lg:block">
-  <Link href="/payment?type=esummit" className="no-underline">
-    <Button
-      variant="default"
-      style={{
-        background: "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
-        color: "white",
-        border: "none",
-        padding: "0.5rem 1.5rem",
-        fontWeight: "bold",
-        borderRadius: "0.375rem",
-        textAlign: "center",
-        cursor: "pointer",
-        transition: "all 0.3s ease",
-      }}
-      onMouseEnter={(e) =>
-        (e.currentTarget.style.background =
-          "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)")
-      }
-      onMouseLeave={(e) =>
-        (e.currentTarget.style.background =
-          "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)")
-      }
-    >
-      Register
-    </Button>
-  </Link>
-</div>
-
+            {!isPortrait && (
+              <div className="hidden lg:block">
+                <Link href="/payment?type=esummit" className="no-underline">
+                  <Button
+                    variant="default"
+                    style={{
+                      background: "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
+                      color: "white",
+                      border: "none",
+                      padding: "0.5rem 1.5rem",
+                      fontWeight: "bold",
+                      borderRadius: "0.375rem",
+                      textAlign: "center",
+                      cursor: "pointer",
+                      transition: "all 0.3s ease",
+                    }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.background =
+                        "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.background =
+                        "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)")
+                    }
+                  >
+                    Register
+                  </Button>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </nav>
@@ -150,12 +160,9 @@ const Navbar: FunctionComponent = () => {
       <Script
         src="https://www.townscript.com/static/Bookingflow/js/townscript-widget.nocache.js"
         strategy="afterInteractive"
-        onLoad={() => setIsScriptLoaded(true)}
       />
     </header>
   );
 };
 
 export default Navbar;
-
-
