@@ -44,20 +44,16 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
     <div className="container mx-auto px-0 sm:px-6 lg:px-8 overflow-hidden relative z-10">
       {/* Heading */}
       <div className="mb-12 text-center relative z-20">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 break-words">
-          {sliderType === "participant" ? (
-            <>
-              What our{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
-                {gradientText}
-              </span>{" "}
-              for us?
-            </>
-          ) : (
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
-              {gradientText}
-            </span>
-          )}
+        <h2
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 break-words"
+          style={{
+            background:
+              "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          {/* {gradientText} */}
         </h2>
       </div>
 
@@ -88,16 +84,10 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
                 index === activeIndex ? "scale-105 z-10" : "scale-95 opacity-80"
               }`}
             >
-              <div className="bg-gradient-to-br from-[#1e1e1e] via-[#222] to-[#2a2a2a] border border-gray-700/50 rounded-2xl shadow-lg sm:px-8 p-6 flex flex-col items-center gap-3 min-h-[220px] hover:border-pink-500/40 transition-all duration-300">
-                <p className="text-pink-400 text-center text-sm italic">
-                  {slide.post}
-                </p>
-                <h3 className="text-white font-semibold text-lg">
-                  {slide.name}
-                </h3>
-                <p className="text-gray-400 text-sm text-center">
-                  {slide.description}
-                </p>
+              <div className="bg-gradient-to-br from-[#1e1e1e] via-[#222] to-[#2a2a2a] border border-gray-700/50 rounded-2xl shadow-lg sm:px-8 p-6 flex flex-col items-center gap-3 min-h-[220px] hover:border-[#487AFA]/40 transition-all duration-300">
+                <p className="text-green-200 text-center text-sm italic">{slide.post}</p>
+                <h3 className="text-[#F1E821] font-semibold text-lg">{slide.name}</h3>
+                <p className="text-white text-sm text-center">{slide.description}</p>
               </div>
             </SwiperSlide>
           ))}
@@ -106,9 +96,10 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
         {/* Navigation Buttons */}
         <div
           ref={navigationPrev}
-          className="absolute max-sm:w-7 max-sm:h-7 top-1/2 left-2 transform -translate-y-1/2 z-10 cursor-pointer 
-          bg-gradient-to-r from-pink-500 to-purple-600 w-12 h-12 flex justify-center items-center 
-          rounded-full shadow-lg shadow-pink-500/30 hover:scale-110 transition-all"
+          className="absolute max-sm:w-7 max-sm:h-7 top-1/2 left-2 transform -translate-y-1/2 z-10 cursor-pointer w-12 h-12 flex justify-center items-center rounded-full shadow-lg hover:scale-110 transition-all"
+          style={{
+            background: "linear-gradient(135deg, #487AFA, #23C0AD, #F1E821)",
+          }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -124,9 +115,10 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
 
         <div
           ref={navigationNext}
-          className="absolute max-sm:w-7 max-sm:h-7 top-1/2 right-2 transform -translate-y-1/2 z-10 cursor-pointer 
-          bg-gradient-to-r from-purple-600 to-pink-500 w-12 h-12 flex justify-center items-center 
-          rounded-full shadow-lg shadow-purple-500/30 hover:scale-110 transition-all"
+          className="absolute max-sm:w-7 max-sm:h-7 top-1/2 right-2 transform -translate-y-1/2 z-10 cursor-pointer w-12 h-12 flex justify-center items-center rounded-full shadow-lg hover:scale-110 transition-all"
+          style={{
+            background: "linear-gradient(45deg, #487AFA, #23C0AD, #F1E821)",
+          }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -50,12 +50,12 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <div className="flex items-center w-full min-h-screen flex-col">
+        {/* <div className="flex items-center w-full min-h-screen flex-col"> */}
           <Navbar />
           {/*<ParallaxProvider>*/}
           <main className="flex-1  ">{children}</main>
           {/*</ParallaxProvider>*/}
-        </div>
+        {/* </div> */}
         <Footer />
         <Toaster />
       </body>
