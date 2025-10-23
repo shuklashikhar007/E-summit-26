@@ -53,9 +53,7 @@ const Hero: FunctionComponent<Props> = () => {
           transition={{ duration: 1.5, ease: "easeInOut" }}
           style={{ marginTop: "50%" }}
         >
-        <div className="flex justify-center w-fit mx-auto items-center gap-4">
-            
-          </div>
+          <div className="flex justify-center w-fit mx-auto items-center gap-4"></div>
           <div className="text-lg md:text-2xl font-bold md:mt-2.5 mt-2 text-[#23C0AD]">
             presents
           </div>
@@ -90,9 +88,7 @@ const Hero: FunctionComponent<Props> = () => {
         </p>
 
         {/* Date */}
-        <p className="mt-14 md:mt-4 text-2xl font-extrabold text-[#F1E821]">
-          
-        </p>
+        <p className="mt-14 md:mt-4 text-2xl font-extrabold text-[#F1E821]"></p>
 
         {/* Buttons */}
         <motion.div
@@ -144,7 +140,7 @@ const Hero: FunctionComponent<Props> = () => {
               {/* Startup Expo Button */}
               <div>
                 <Link
-                  href={"/payment?type=StartupExpo"}
+                  href={"/payment?type=startup_junction"}
                   className="no-underline"
                 >
                   <motion.button
@@ -184,7 +180,13 @@ const Hero: FunctionComponent<Props> = () => {
             </div>
           ) : (
             <div className="rounded-full flex justify-center items-center bg-gradient-to-r from-[#23C0AD] to-[#487AFA] cursor-pointer mt-4 shadow-[0_0_15px_#487AFA]">
-              <Image unoptimized src={Res} alt="Arrow Icon" width={50} height={50} />
+              <Image
+                unoptimized
+                src={Res}
+                alt="Arrow Icon"
+                width={50}
+                height={50}
+              />
             </div>
           )}
         </motion.div>

@@ -25,7 +25,6 @@ declare global {
 }
 
 const navItems = [
-  { name: "HOME", link: "/" },
   { name: "ITINERARY", link: "/itinerary" },
   { name: "EVENTS", link: "/events" },
   { name: "SPEAKERS", link: "/speakers" },
@@ -33,6 +32,7 @@ const navItems = [
   { name: "CONTACT US", link: "/contact" },
   { name: "MERCH", link: "/merch" },
   { name: "INITIATIVE", link: "/initiative" },
+  { name: "SJ", link: "/SJ" },
 ];
 
 const Navbar: FunctionComponent = () => {
@@ -54,7 +54,11 @@ const Navbar: FunctionComponent = () => {
         <div className="relative block px-8">
           <div className="flex items-center justify-between w-full p-3 gap-1 capitalize">
             {/* Logo */}
-            <Link href="/" aria-label="logo" className="block w-10 -m-4 items-center">
+            <Link
+              href="/"
+              aria-label="logo"
+              className="block w-10 -m-4 items-center"
+            >
               <Image
                 unoptimized
                 src={logo}
@@ -71,7 +75,10 @@ const Navbar: FunctionComponent = () => {
                 {navItems.map((item, index) => (
                   <li key={index}>
                     <Link href={item.link} className="no-underline">
-                      <Button className="text-primary-foreground" variant="link">
+                      <Button
+                        className="text-primary-foreground"
+                        variant="link"
+                      >
                         {item.name.toUpperCase()}
                       </Button>
                     </Link>
@@ -112,34 +119,34 @@ const Navbar: FunctionComponent = () => {
 
             {/* Register Button */}
             <div className="hidden lg:block">
-  <Link href="/payment?type=esummit" className="no-underline">
-    <Button
-      variant="default"
-      style={{
-        background: "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
-        color: "white",
-        border: "none",
-        padding: "0.5rem 1.5rem",
-        fontWeight: "bold",
-        borderRadius: "0.375rem",
-        textAlign: "center",
-        cursor: "pointer",
-        transition: "all 0.3s ease",
-      }}
-      onMouseEnter={(e) =>
-        (e.currentTarget.style.background =
-          "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)")
-      }
-      onMouseLeave={(e) =>
-        (e.currentTarget.style.background =
-          "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)")
-      }
-    >
-      Register
-    </Button>
-  </Link>
-</div>
-
+              <Link href="/payment?type=esummit" className="no-underline">
+                <Button
+                  variant="default"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
+                    color: "white",
+                    border: "none",
+                    padding: "0.5rem 1.5rem",
+                    fontWeight: "bold",
+                    borderRadius: "0.375rem",
+                    textAlign: "center",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.background =
+                      "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.background =
+                      "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)")
+                  }
+                >
+                  Register
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -157,5 +164,3 @@ const Navbar: FunctionComponent = () => {
 };
 
 export default Navbar;
-
-
