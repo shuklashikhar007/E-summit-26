@@ -22,11 +22,17 @@ const About = () => {
         <div className={styles.card}>
           <div className={styles.cardContent}>
             <h3
-              className={"m-0 max-sm:text-md text-primary font-bold "}
-              style={{ fontSize: "2.5rem" }}
+              className="m-0 max-sm:text-md font-bold"
+              style={{
+                fontSize: "2.5rem",
+                background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
             >
               ABOUT E-SUMMIT&apos;26
             </h3>
+
 
             <h1 className={"m-0 text-secondary break-words"}>
               E-Summit is an electrifying celebration of innovation and

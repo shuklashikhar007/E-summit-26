@@ -33,9 +33,6 @@ const page: FunctionComponent<Props> = (props) => {
       <EventsSection sectionTitle="Strategy Events" events={stategyEvents} />
       <EventsSection sectionTitle="Fun Events" events={funEvents} />
       {/* <EventsSection sectionTitle="School Event" events={schoolEvents} /> */}
-
-      
-
     </section>
 
 

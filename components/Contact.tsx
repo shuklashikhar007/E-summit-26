@@ -160,8 +160,19 @@ const Contact: FunctionComponent = () => {
       </div>
 
       {/* Address */}
-      <div className="text-center mx-24 my-7">
-        <p className="text-red-300 font-bold text-2xl">Address</p>
+      <div className="text-center mx-24 my-7">📍
+        <p
+  className="font-bold text-xl inline-block"
+  style={{
+    background: "linear-gradient(90deg, #F1E821, #23C0AD,#487AFA )",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>
+  Address
+</p>
+
+
         <p className="text-sm">
           Indian Institute of Technology (Banaras Hindu University), Varanasi,
           India, PIN: 221005

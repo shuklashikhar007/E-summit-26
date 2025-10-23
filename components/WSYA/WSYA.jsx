@@ -60,7 +60,7 @@ const WSYA = () => {
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-2">Why should You{" "}  <span
     style={{
-      background: "linear-gradient(90deg, #6A23A6, #E91045)",
+      background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
     }}
