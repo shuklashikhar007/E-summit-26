@@ -38,7 +38,7 @@ const page: FunctionComponent<Props> = () => {
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl m-4 flex justify-center font-semibold sm:py-6"
               style={{
-                background: "linear-gradient(90deg, #6A23A6, #E91045)",
+                background: "linear-gradient(90deg, #0f786bff, #6EE7D8)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 display: "inline-block",

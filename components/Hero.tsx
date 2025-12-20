@@ -72,7 +72,7 @@ const Hero: FunctionComponent = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-          presents
+          
         </h2>
 
         {/* Logo with Glow Effect */}
